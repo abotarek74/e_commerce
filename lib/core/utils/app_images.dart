@@ -6,13 +6,17 @@ class Assets {
   /// assets/images/app_icon.png
   static const String imagesAppIcon = "assets/images/app_icon.png";
 
+  /// Assets for imagesBack
+  /// assets/images/back.svg
+  static const String imagesBack = "assets/images/back.svg";
+
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
 
   /// Assets for imagesPageViewItemBackground 2
   /// assets/images/page_view_item_background 2.svg
-  static const String imagesPageViewItemBackgroun2 =
+  static const String imagesPageViewItemBackground2 =
       "assets/images/page_view_item_background 2.svg";
 
   /// Assets for imagesPageViewItemImage 1
