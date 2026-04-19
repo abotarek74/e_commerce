@@ -1,4 +1,3 @@
-import 'package:e_commerce/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -6,13 +5,16 @@ class PageViewItem extends StatelessWidget {
   const PageViewItem({
     super.key,
     required this.image,
-    required this.backgroundimage,
+    required this.backgroundImage,
     required this.subTitle,
     required this.title,
   });
-  final String image, backgroundimage;
+
+  final String image;
+  final String backgroundImage;
   final String subTitle;
   final Widget title;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,11 +26,9 @@ class PageViewItem extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Positioned.fill(
-                child: SvgPicture.asset(
-                  Assets.imagesPageViewitem1Backgroundimage,
-                  fit: BoxFit.fill,
-                ),
+                child: SvgPicture.asset(backgroundImage, fit: BoxFit.fill),
               ),
+
               Positioned(
                 bottom: 0,
                 left: 0,
@@ -39,14 +39,14 @@ class PageViewItem extends StatelessWidget {
                   child: SvgPicture.asset(image, fit: BoxFit.contain),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
+
+              const Padding(
+                padding: EdgeInsets.all(16),
                 child: Text(
                   'تخط',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
-                    fontStyle: FontStyle.normal,
                     color: Colors.black,
                   ),
                 ),
@@ -54,9 +54,13 @@ class PageViewItem extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 64),
+
+        const SizedBox(height: 64),
+
         title,
-        SizedBox(height: 24),
+
+        const SizedBox(height: 24),
+
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(subTitle, textAlign: TextAlign.center),
