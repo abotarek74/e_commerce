@@ -3,7 +3,8 @@ import 'package:e_commerce/features/on_boarding/presentaion/views/widgets/page_v
 import 'package:flutter/material.dart';
 
 class OneBoardingPageView extends StatefulWidget {
-  const OneBoardingPageView({super.key});
+  const OneBoardingPageView({super.key, required this.pageController});
+  final PageController pageController;
 
   @override
   State<OneBoardingPageView> createState() => _OneBoardingPageViewState();
@@ -39,6 +40,11 @@ class _OneBoardingPageViewState extends State<OneBoardingPageView> {
             controller: _pageController,
             children: [
               PageViewItem(
+                isVisible:
+                    (PageController().hasClients
+                        ? PageController().page!.round()
+                        : 0) ==
+                    0,
                 image: Assets.imagesPageViewItemImage1,
                 backgroundImage: Assets.imagesPageViewitem1Backgroundimage,
                 subTitle:
@@ -47,13 +53,18 @@ class _OneBoardingPageViewState extends State<OneBoardingPageView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text('مرحبًا بك في '),
-                    Text('Fruit'),
                     Text('HUB'),
+                    Text('Fruit'),
                   ],
                 ),
               ),
 
               PageViewItem(
+                isVisible:
+                    (PageController().hasClients
+                        ? PageController().page!.round()
+                        : 0) !=
+                    0,
                 image: Assets.imagesPageViewItemImage2,
                 backgroundImage: Assets.imagesPageViewItemBackground2,
                 subTitle:
@@ -72,24 +83,9 @@ class _OneBoardingPageViewState extends State<OneBoardingPageView> {
             ],
           ),
         ),
+
         const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(
-            2,
-            (index) => Container(
-              margin: const EdgeInsets.symmetric(horizontal: 4),
-              width: 8,
-              height: 8,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _currentPage == index
-                    ? const Color(0XFF0C0D0D)
-                    : Colors.grey,
-              ),
-            ),
-          ),
-        ),
+
         const SizedBox(height: 16),
       ],
     );
