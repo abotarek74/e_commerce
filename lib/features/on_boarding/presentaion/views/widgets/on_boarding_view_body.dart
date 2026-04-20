@@ -15,7 +15,7 @@ class OnBoardingViewBody extends StatefulWidget {
 class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   late PageController pageController;
   int currentPage = 0;
-  final int totalPages = 2; // 👈 عدد الصفحات
+  final int totalPages = 2;
 
   @override
   void initState() {
@@ -41,6 +41,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 currentPage = index;
               });
             },
+            currentPage: currentPage,
           ),
         ),
 

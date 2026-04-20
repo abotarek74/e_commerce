@@ -9,10 +9,12 @@ class OneBoardingPageView extends StatelessWidget {
     super.key,
     required this.pageController,
     required this.onPageChanged,
+    required this.currentPage,
   });
 
   final PageController pageController;
   final void Function(int) onPageChanged;
+  final int currentPage;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class OneBoardingPageView extends StatelessWidget {
       onPageChanged: onPageChanged,
       children: [
         PageViewItem(
-          isVisible: true,
+          isVisible: currentPage == 0,
           image: Assets.imagesPageViewItemImage1,
           backgroundImage: Assets.imagesPageViewitem1Backgroundimage,
           subTitle:
@@ -45,7 +47,7 @@ class OneBoardingPageView extends StatelessWidget {
         ),
 
         PageViewItem(
-          isVisible: true,
+          isVisible: currentPage == 0,
           image: Assets.imagesPageViewItemImage2,
           backgroundImage: Assets.imagesPageViewItemBackground2,
           subTitle:
