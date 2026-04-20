@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -67,8 +68,12 @@ class PageViewItem extends StatelessWidget {
         const SizedBox(height: 24),
 
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(subTitle, textAlign: TextAlign.center),
+          padding: const EdgeInsets.symmetric(horizontal: 37),
+          child: Text(
+            style: TextStyles.semiBold13.copyWith(color: Color(0XFF4E5456)),
+            subTitle,
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     );

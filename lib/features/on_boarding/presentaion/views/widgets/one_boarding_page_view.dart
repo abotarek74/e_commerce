@@ -1,4 +1,6 @@
+import 'package:e_commerce/core/utils/app_color.dart';
 import 'package:e_commerce/core/utils/app_images.dart';
+import 'package:e_commerce/core/utils/app_text_styles.dart';
 import 'package:e_commerce/features/on_boarding/presentaion/views/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +28,19 @@ class OneBoardingPageView extends StatelessWidget {
               "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [Text('مرحبًا بك في '), Text('HUB'), Text('Fruit')],
+            children: [
+              Text('مرحبًا بك في ', style: TextStyles.bold23),
+              Text(
+                'HUB',
+                style: TextStyles.bold23.copyWith(
+                  color: AppColor.secondaryColor,
+                ),
+              ),
+              Text(
+                'Fruit',
+                style: TextStyles.bold23.copyWith(color: AppColor.primaryColor),
+              ),
+            ],
           ),
         ),
 
