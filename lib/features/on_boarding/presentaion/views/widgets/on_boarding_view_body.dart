@@ -14,15 +14,12 @@ class OnBoardingViewBody extends StatefulWidget {
 
 class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   late PageController pageController;
-  var currentPage = 0;
+  int currentPage = 0;
+  final int totalPages = 2; // 👈 عدد الصفحات
+
   @override
   void initState() {
     pageController = PageController();
-    pageController.addListener(() {
-      setState(() {
-        currentPage = pageController.page!.round();
-      });
-    });
     super.initState();
   }
 
@@ -36,21 +33,40 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: OneBoardingPageView(pageController: pageController)),
+        Expanded(
+          child: OneBoardingPageView(
+            pageController: pageController,
+            onPageChanged: (index) {
+              setState(() {
+                currentPage = index;
+              });
+            },
+          ),
+        ),
+
         DotsIndicator(
-          dotsCount: 2,
+          dotsCount: totalPages,
+          position: currentPage.toDouble(),
           decorator: DotsDecorator(
             activeColor: AppColor.primaryColor,
             color: AppColor.primaryColor.withValues(alpha: 0.5),
           ),
         ),
-        SizedBox(height: 29),
+
+        const SizedBox(height: 29),
+
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: KHhorizontalPadding),
-          child: CustomButton(onPressed: () {}, text: 'ابدأ الان'),
+          child: Visibility(
+            maintainState: true,
+            maintainAnimation: true,
+            maintainSize: true,
+            visible: currentPage == totalPages - 1,
+            child: CustomButton(onPressed: () {}, text: 'ابدأ الآن'),
+          ),
         ),
 
-        SizedBox(height: 43),
+        const SizedBox(height: 43),
       ],
     );
   }
