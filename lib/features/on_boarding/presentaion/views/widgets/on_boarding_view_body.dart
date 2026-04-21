@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/core/utils/app_color.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
+import 'package:e_commerce/features/auth/presentation/views/login_view.dart';
 import 'package:e_commerce/features/on_boarding/presentaion/views/widgets/one_boarding_page_view.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             maintainAnimation: true,
             maintainSize: true,
             visible: currentPage == totalPages - 1,
-            child: CustomButton(onPressed: () {}, text: 'ابدأ الآن'),
+            child: CustomButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+              },
+              text: 'ابدأ الآن',
+            ),
           ),
         ),
 
