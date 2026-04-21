@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce/constants.dart';
+import 'package:e_commerce/core/services/shared_preferences_singleton.dart';
 import 'package:e_commerce/core/utils/app_color.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/features/auth/presentation/views/login_view.dart';
@@ -66,7 +67,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             visible: currentPage == totalPages - 1,
             child: CustomButton(
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+                prefs.setBool(isOnBoardingViewSeenkey, true);
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginView()),
+                );
               },
               text: 'ابدأ الآن',
             ),
