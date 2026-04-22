@@ -32,7 +32,7 @@ class _SpalshViewBodyState extends State<SpalshViewBody> {
           children: [SvgPicture.asset(Assets.imagesPlant)],
         ),
         SvgPicture.asset(Assets.imagesLogo),
-        SvgPicture.asset(Assets.imagesSplashbottom),
+        SvgPicture.asset(Assets.imagesSplashBottom),
       ],
     );
   }

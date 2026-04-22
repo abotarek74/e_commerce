@@ -66,6 +66,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             maintainSize: true,
             visible: currentPage == totalPages - 1,
             child: CustomButton(
+              backgroundColor: AppColor.primaryColor,
               onPressed: () {
                 prefs.setBool(isOnBoardingViewSeenkey, true);
                 Navigator.pushReplacement(

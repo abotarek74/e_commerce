@@ -3,7 +3,12 @@ import 'package:e_commerce/core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onPressed, required this.text});
+  const CustomButton({
+    super.key,
+    required this.onPressed,
+    required this.text,
+    required Color backgroundColor,
+  });
   final VoidCallback onPressed;
   final String text;
   @override

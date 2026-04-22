@@ -6,9 +6,21 @@ class Assets {
   /// assets/images/app_icon.png
   static const String imagesAppIcon = "assets/images/app_icon.png";
 
+  /// Assets for imagesAppleIcon
+  /// assets/images/apple_icon.svg
+  static const String imagesAppleIcon = "assets/images/apple_icon.svg";
+
   /// Assets for imagesBack
   /// assets/images/back.svg
   static const String imagesBack = "assets/images/back.svg";
+
+  /// Assets for imagesFaceboocIcon
+  /// assets/images/facebooc_icon.svg
+  static const String imagesFaceboocIcon = "assets/images/facebooc_icon.svg";
+
+  /// Assets for imagesGoogelIcon
+  /// assets/images/googel_icon.svg
+  static const String imagesGoogelIcon = "assets/images/googel_icon.svg";
 
   /// Assets for imagesLogo
   /// assets/images/logo.svg
@@ -40,5 +52,5 @@ class Assets {
 
   /// Assets for imagesSplash bottom
   /// assets/images/splash bottom.svg
-  static const String imagesSplashbottom = "assets/images/splash bottom.svg";
+  static const String imagesSplashBottom = "assets/images/splash bottom.svg";
 }
