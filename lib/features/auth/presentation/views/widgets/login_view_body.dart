@@ -3,7 +3,10 @@ import 'package:e_commerce/core/utils/app_color.dart';
 import 'package:e_commerce/core/utils/app_text_styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/dont_have_an_accout_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'or_divider.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -42,29 +45,13 @@ class LoginViewBody extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 32),
+            SizedBox(height: 33),
             CustomButton(onPressed: () {}, text: 'تسجيل دخول'),
-            SizedBox(height: 32),
+            SizedBox(height: 33),
 
-            Text.rich(
-              TextSpan(
-                text: 'ليس لديك حساب؟ ',
-                style: TextStyles.semiBold16.copyWith(color: Color(0XFF949D9E)),
-                children: [
-                  TextSpan(
-                    text: ' انشاء حساب جديد',
-                    style: TextStyles.semiBold16.copyWith(
-                      color: AppColor.primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 32),
-            Text(
-              'أو',
-              style: TextStyles.semiBold16.copyWith(color: Colors.black),
-            ),
+            dontHaveAnAccountWidget(),
+            SizedBox(height: 33),
+            OrDivider(),
           ],
         ),
       ),
