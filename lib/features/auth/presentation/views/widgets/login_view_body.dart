@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/core/utils/app_color.dart';
 import 'package:e_commerce/core/utils/app_images.dart';
@@ -57,7 +55,7 @@ class LoginViewBody extends StatelessWidget {
               ),
               SizedBox(height: 32),
 
-              dontHaveAnAccountWidget(),
+              dontHaveAnAccountWidget(context: context),
               SizedBox(height: 32),
               OrDivider(),
               SizedBox(height: 16),
