@@ -1,4 +1,5 @@
 import 'package:e_commerce/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/tearms_and_condition.dart';
 import 'package:flutter/material.dart';
 
 class SiginupViewBody extends StatelessWidget {
@@ -33,6 +34,8 @@ class SiginupViewBody extends StatelessWidget {
                 color: Color(0XFF949D9E),
               ),
             ),
+            SizedBox(height: 16),
+            TearmsAndCondition(),
           ],
         ),
       ),
