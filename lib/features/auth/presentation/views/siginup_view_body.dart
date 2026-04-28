@@ -1,4 +1,6 @@
+import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:e_commerce/features/auth/presentation/views/widgets/have_an_account.dart';
 import 'package:e_commerce/features/auth/presentation/views/widgets/tearms_and_condition.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +38,14 @@ class SiginupViewBody extends StatelessWidget {
             ),
             SizedBox(height: 16),
             TearmsAndCondition(),
+            SizedBox(height: 30),
+            CustomButton(
+              onPressed: () {},
+              text: 'إنشاء حساب جديد',
+              backgroundColor: Colors.white,
+            ),
+            SizedBox(height: 26),
+            haveAnAccountWidget(context: context),
           ],
         ),
       ),
