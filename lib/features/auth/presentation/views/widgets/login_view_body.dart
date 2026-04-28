@@ -24,9 +24,11 @@ class LoginViewBody extends StatelessWidget {
               CustomTextFormField(
                 hintText: 'البريد الالكتروني',
                 textInputType: TextInputType.emailAddress,
+                backgroundColor: Color(0XFFE6E9E9),
               ),
               SizedBox(height: 16),
               CustomTextFormField(
+                backgroundColor: Colors.white,
                 suffixIcon: Icon(
                   Icons.visibility_off_outlined,
                   color: Color(0XFF949D9E),

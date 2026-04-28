@@ -7,6 +7,7 @@ class CustomTextFormField extends StatelessWidget {
     required this.hintText,
     required this.textInputType,
     this.suffixIcon,
+    required Color backgroundColor,
   });
   final String hintText;
   final TextInputType textInputType;
