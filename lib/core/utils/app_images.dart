@@ -14,6 +14,10 @@ class Assets {
   /// assets/images/back.svg
   static const String imagesBack = "assets/images/back.svg";
 
+  /// Assets for imagesCheck
+  /// assets/images/imageCheck.svg
+  static const String imagesCheck = "assets/images/imageCheck.svg";
+
   /// Assets for imagesFaceboocIcon
   /// assets/images/facebooc_icon.svg
   static const String imagesFaceboocIcon = "assets/images/facebooc_icon.svg";
@@ -52,5 +56,5 @@ class Assets {
 
   /// Assets for imagesSplash bottom
   /// assets/images/splash bottom.svg
-  static const String imagesSplashBottom = "assets/images/splash bottom.svg";
+  static const String imagesSplashbottom = "assets/images/splash bottom.svg";
 }

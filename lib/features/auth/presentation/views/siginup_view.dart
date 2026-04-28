@@ -10,6 +10,7 @@ class SiginupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: buildAppBar(title: 'حساب جديد'),
       body: const SiginupViewBody(),
     );
