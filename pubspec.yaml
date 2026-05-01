@@ -39,6 +39,7 @@ dependencies:
   flutter_svg: ^2.2.4
   dots_indicator: ^4.0.1
   shared_preferences: ^2.5.5
+  firebase_core: ^4.7.0
 
 dev_dependencies:
   intl_utils: ^2.8.14
